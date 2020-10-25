@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../images/background2.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    margin: 1.5em;
+}
+
+.my-all {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.my-header {
+    grid-area: header;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.db-logo {
+    width: 20vw;
+    text-align: center;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(5 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        ". header header header ."
+        "player1 player1 bottom-middle-info player2 player2"
+        "username1 . bottom-middle-info . username2"
+        ". . bottom-middle-info . .";
+    padding: 1vw;
+}
+
+.player1 {
+    grid-area: player1;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.player1-pic {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.player1-data {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.5em 0; 
+}
+
+.player1-data > p {
+    margin: 0.5em 0;
+}
+
+.username0 {
+    grid-area: username1;
+    margin: 1em;
+}
+
+.username0-data {
+}
+
+.username1 {
+    grid-area: username2;
+    margin: 1em;
+}
+
+.username1-data {
+    margin: 0.5em 0;
+}
+        
+.player2 {
+    grid-area: player2;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.player2-pic {
+    width: 50%;
+}
+
+.player2-data {
+    width: 50%;
+    margin: 0.5em 0;
+}
+
+.player2-data > p {
+    margin: 0.5em 0;
+}
+
+.bottom-middle-info {
+    grid-area: bottom-middle-info;
+    align-self: flex-end;
+}
+
+.fight-info {
+    border: black solid 1px;
+    border-radius: 10px;
+    overflow: scroll;
+    background-color: white;
+    color: black;
+    padding: 0.5vw;
+    margin-bottom: 3vw;
+    width: 30vw;
+    height: 10vw;
+}
+
+.fight-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.fight-button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 0.2vw;
+    font-size: 1.3vw;
+    font-weight: bold;
+    padding: 1vw;
+    width: 20vw;
+    background-color: rgb(211, 137, 0);
+    color: white;
+    border-radius: 50px;
+    border: none;
+}
+
+.fight-button:hover {
+    font-size: 1.4vw;
+    letter-spacing: 0.3vw;
+    background-color: rgb(233, 168, 49);;
+}
+
+
+/* .fight-gif {
+    grid-area: bottom-middle-info;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+} */
+.hide {
+    display: none;
+}
+
+/* .loading1 img{
+    position: relative;
+    left: 30%;
+    top: 30%;
+}
+.loading2 img{
+    position: relative;
+    left: 30%;
+    top: 30%;
+} */
+.loading1 {
+    grid-area: username1;
+    margin: 1em;
+
+}
+
+.loading2 {
+    grid-area: username2;
+    margin: 1em;
+
+
+
+}
